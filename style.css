@@ -1,0 +1,178 @@
+/* CONFIGURAÇÕES GERAIS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Century, serif;
+}
+
+
+/* FUNDO PRINCIPAL */
+
+.header {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("Lumiere.jpg");
+        
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* CABEÇALHO */
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+
+/* MENU PRINCIPAL */
+
+.main > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* LINKS */
+
+.main > ul > li {
+    display: inline-block;
+}
+
+.main > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    transition: 0.4s ease;
+}
+
+/* EFEITO DO MOUSE */
+
+.main > ul > li > a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* ITEM ATIVO */
+
+.main > ul > li.active > a {
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* SUBMENU */
+
+.dropdown {
+    position: relative;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 140px;
+    background-color: rgb(0, 45, 117);
+    z-index: 10;
+}
+
+.dropdown:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu ul {
+    list-style: none;
+}
+
+.sub-menu ul li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.sub-menu ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+.sub-menu ul li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* CONTEÚDO CENTRAL */
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+
+/* TÍTULO */
+
+.title h1 {
+    color: #fff;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.1;
+    text-align: center;
+}
+
+
+/* BOTÕES */
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
